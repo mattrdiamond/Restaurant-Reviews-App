@@ -1,0 +1,25 @@
+{
+  "name": "restaurant-reviews-gulp-test",
+  "version": "1.0.0",
+  "description": "--- #### _Three Stage Course Material Project - Restaurant Reviews_",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattrdiamond/Restaurant-Review-App-Stage-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattrdiamond/Restaurant-Review-App-Stage-1/issues"
+  },
+  "homepage": "https://github.com/mattrdiamond/Restaurant-Review-App-Stage-1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

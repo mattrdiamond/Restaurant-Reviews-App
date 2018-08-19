@@ -1,0 +1,26 @@
+//--------------------------------------------------------------------
+// Colors
+//--------------------------------------------------------------------
+
+// Main Color Palette
+$white: #fff;
+$black: #000;
+$primary-color: #3397db;
+$primary-accent: orange;
+
+// Color variants
+$gray-01: lighten($black, 95%);
+$gray-02: lighten($black, 87%);
+$gray-03: lighten($black, 80%);
+$gray-04: lighten($black, 40%);
+$gray-05: lighten($black, 20%);
+$gray-06: lighten($black, 15%);
+
+$primary-color-dark: darken($primary-color, 30%);
+$primary-accent-dark: #f18200;
+
+//--------------------------------------------------------------------
+// Fonts
+//--------------------------------------------------------------------
+
+$primary-font: Arial, Helvetica, sans-serif;
