@@ -57,17 +57,27 @@ nav {
   height: 80px;
   background-color: $gray-06;
   text-align:center;
+	h1 {
+		margin: auto;
+		a {
+			color: $white;
+		  font-size: 14pt;
+		  font-weight: 200;
+		  letter-spacing: 10px;
+		  text-transform: uppercase;
+		}
+	}
 }
-nav h1 {
-  margin: auto;
-}
-nav h1 a {
-  color: $white;
-  font-size: 14pt;
-  font-weight: 200;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-}
+// nav h1 {
+//   margin: auto;
+// }
+// nav h1 a {
+//   color: $white;
+//   font-size: 14pt;
+//   font-weight: 200;
+//   letter-spacing: 10px;
+//   text-transform: uppercase;
+// }
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
