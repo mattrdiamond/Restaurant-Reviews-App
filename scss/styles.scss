@@ -68,47 +68,63 @@ nav {
 		}
 	}
 }
-// nav h1 {
-//   margin: auto;
+
+// #breadcrumb {
+//     padding: 10px 40px 16px;
+//     list-style: none;
+//     background-color: $gray-02;
+//     font-size: 17px;
+//     margin: 0;
+//     width: calc(50% - 80px);
 // }
-// nav h1 a {
-//   color: $white;
-//   font-size: 14pt;
-//   font-weight: 200;
-//   letter-spacing: 10px;
-//   text-transform: uppercase;
-// }
-#breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    background-color: $gray-02;
-    font-size: 17px;
-    margin: 0;
-    width: calc(50% - 80px);
-}
 
 /* Display list items side by side */
-#breadcrumb li {
-    display: inline;
-}
+// #breadcrumb li {
+//     display: inline;
+// }
 
 /* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
-    padding: 8px;
-    color: $black;
-    content: "/\00a0";
-}
+// #breadcrumb li+li:before {
+//     padding: 8px;
+//     color: $black;
+//     content: "/\00a0";
+// }
 
 /* Add a color to all links inside the list */
-#breadcrumb li a {
-    color: $primary-color;
-    text-decoration: none;
-}
+// #breadcrumb li a {
+//     color: $primary-color;
+//     text-decoration: none;
+// }
 
 /* Add a color on mouse-over */
-#breadcrumb li a:hover {
-    color: $primary-color-dark;
-    text-decoration: underline;
+// #breadcrumb li a:hover {
+//     color: $primary-color-dark;
+//     text-decoration: underline;
+// }
+
+#breadcrumb {
+	padding: 10px 40px 16px;
+	list-style: none;
+	background-color: $gray-02;
+	font-size: 17px;
+	margin: 0;
+	width: calc(50% - 80px);
+	li+li:before {
+		padding: 8px;
+    color: $black;
+    content: "/\00a0";
+	}
+	li {
+		display: inline;
+		a {
+			color: $primary-color;
+	    text-decoration: none;
+			&:hover {
+				color: $primary-color-dark;
+				text-decoration: underline;
+			}
+		}
+	}
 }
 /* ====================== Map ====================== */
 #map {
