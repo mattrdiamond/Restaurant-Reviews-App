@@ -5,15 +5,16 @@
 // Main Color Palette
 $white: #fff;
 $black: #000;
-$primary-color: #3397db;
-$primary-accent: orange;
+$primary-color: #e02e48;
+$primary-accent: #196ebb;
 
 // Color variants
-$gray-01: lighten($black, 95%);
+$gray-01: lighten($black, 92%);
 $gray-02: lighten($black, 87%);
-$gray-03: lighten($black, 80%);
-$gray-04: lighten($black, 40%);
-$gray-05: lighten($black, 20%);
+$gray-03: lighten($black, 75%);
+$gray-03: lighten($black, 60%);
+$gray-04: lighten($black, 45%);
+$gray-05: lighten($black, 30%);
 $gray-06: lighten($black, 15%);
 
 $primary-color-dark: darken($primary-color, 30%);
@@ -23,4 +24,7 @@ $primary-accent-dark: #f18200;
 // Fonts
 //--------------------------------------------------------------------
 
-$primary-font: Arial, Helvetica, sans-serif;
+$display-font: 'Poppins', Arial, sans-serif;
+$body-font: 'Roboto', Arial, sans-serif;
+
+$body-letterspacing: 0.3px; 
