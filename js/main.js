@@ -163,23 +163,23 @@ createRestaurantHTML = (restaurant) => {
   image.alt = `An image of ${restaurant.name}`;
   li.append(image);
 
-  const div = document.createElement('div');
-  div.className = 'restaurant-info'
-  li.append(div);
+  const restaurantInfo = document.createElement('div');
+  restaurantInfo.className = 'restaurant-info';
+  li.append(restaurantInfo);
 
   const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
-  div.append(name);
+  restaurantInfo.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  div.append(neighborhood);
+  restaurantInfo.append(neighborhood);
 
   const address = document.createElement('p');
   const addressFormat = restaurant.address.replace(',', '<br/>');
   address.innerHTML = addressFormat;
   // address.innerHTML = restaurant.address;
-  div.append(address);
+  restaurantInfo.append(address);
 
   const more = document.createElement('button');
   more.innerHTML = 'View Details';
@@ -188,7 +188,7 @@ createRestaurantHTML = (restaurant) => {
     location.href = url;
   }
   more.href = DBHelper.urlForRestaurant(restaurant);
-  div.append(more)
+  restaurantInfo.append(more)
 
   return li
 }

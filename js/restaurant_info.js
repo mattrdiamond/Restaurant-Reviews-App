@@ -91,6 +91,17 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.alt = `An image of ${restaurant.name}`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
+
+  // ******************* edit
+  // const imageContainer = document.createElement('div');
+  // imageContainer.className = 'image-container';
+  // const span = document.createElement('span');
+  // span.setAttribute('role', 'img');
+  // span.setAttribute('aria-label', `An image of ${restaurant.name}`);
+  // li.append(imageContainer);
+  // imageContainer.append(span);
+  // *******************
+
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 

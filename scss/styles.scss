@@ -4,9 +4,14 @@
 /* CSS Document */
 @charset "utf-8";
 
+html {
+	font-family: $body-font;
+	font-weight: 300;
+	letter-spacing: $body-letterspacing;
+}
+
 body,td,th,p{
-	font-family: $display-font;
-	font-size: 10pt;
+	font-size: 11pt;
 	color: $gray-05;
 	line-height: 1.5;
 }
@@ -15,6 +20,12 @@ body {
 	background-color: $gray-01;
 	margin: 0;
 	position:relative;
+	// font-family: $body-font;
+}
+
+p {
+	// font-family: $body-font;
+	// font-weight:
 }
 
 button {
@@ -37,7 +48,7 @@ button {
 }
 
 ul, li {
-	font-family: $display-font;
+	// font-family: $display-font;
 	font-size: 10pt;
 	color: $gray-05;
 }
@@ -60,6 +71,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
+h2 {
+	color: $primary-accent;
+}
+
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -67,6 +82,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: $gray-01;
   min-height: 100%;
+	max-width: 1165px;
+	box-sizing: border-box;
+	padding: 20px 40px;
+	margin: 0 auto;
 }
 
 #footer {
@@ -98,13 +117,19 @@ nav {
 	}
 }
 
+.breadcrumb-container {
+	padding: 10px 0;
+	width: 100%;
+	background-color: $white;
+}
+
 #breadcrumb {
-	padding: 10px 40px 16px;
+	// padding: 10px 40px 16px;
 	list-style: none;
-	background-color: $gray-02;
+	max-width: 1165px;
+	box-sizing: border-box;
+	margin: 0 auto;
 	font-size: 17px;
-	margin: 0;
-	width: calc(50% - 80px);
 	li+li:before {
 		padding: 8px;
     color: $black;
@@ -126,7 +151,7 @@ nav {
 /* ====================== Map ====================== */
 #map {
   height: 400px;
-  width: 100%;
+  width: 30%;
   background-color: $gray-03;
 }
 
@@ -227,39 +252,27 @@ nav {
 /* ====================== Restaurant Details ====================== */
 .inside {
 	header {
-		position: fixed;
 	  top: 0;
 	  width: 100%;
 	  z-index: 1000;
 	}
 	#map-container {
-		background: blue none repeat scroll 0 0;
-	  height: 87%;
-	  position: fixed;
-	  right: 0;
-	  top: 80px;
-	  width: 50%;
+		// background: blue none repeat scroll 0 0;
+	  width: 35%;
+		float: right;
 	}
 	#map {
 		background-color: $gray-03;
-	  height: 100%;
 	  width: 100%;
-	}
-	#footer {
-		bottom: 0;
-	  position: absolute;
-	  width: 50%;
 	}
 }
 
 #restaurant-name {
-  color: $primary-accent-dark;
+  color: $primary-accent;
   font-family: $display-font;
   font-size: 20pt;
-  font-weight: 200;
   letter-spacing: 0;
   margin: 15px 0 30px;
-  text-transform: uppercase;
   line-height: 1.1;
 }
 
@@ -287,24 +300,22 @@ nav {
 
 #restaurant-container,
 #reviews-container {
-  border-bottom: 1px solid $gray-02;
-  border-top: 1px solid $white;
-  padding: 140px 40px 30px;
-  width: 50%;
+  width: 60%;
 }
 
 #restaurant-container {
 	border: 1px solid red;
+	.image-container {
+		width: 200px;
+		height: 200px;
+		background: green;
+	}
 }
 
 #reviews-container {
-  padding: 30px 40px 80px;
+  // padding: 30px 40px 80px;
 	h2 {
-		color: $primary-accent-dark;
-	  font-size: 24pt;
-	  font-weight: 300;
-	  letter-spacing: -1px;
-	  padding-bottom: 1pt;
+	  margin-top: 20px;
 	}
 }
 
@@ -316,11 +327,14 @@ nav {
 	  border: 2px solid $gray-01;
 	  display: block;
 	  list-style-type: none;
-	  margin: 0 0 30px;
+	  margin-top: 20px;
 	  overflow: hidden;
-	  padding: 0 20px 20px;
+	  padding: 20px;
 	  position: relative;
-	  width: 85%;
+		border-radius: 15px;
+		&:first-of-type {
+			margin-top: 0;
+		}
 		p {
 			margin: 0 0 10px;
 		}
