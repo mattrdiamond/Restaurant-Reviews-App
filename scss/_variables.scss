@@ -12,10 +12,10 @@ $primary-accent: #196ebb;
 $gray-01: lighten($black, 92%);
 $gray-02: lighten($black, 87%);
 $gray-03: lighten($black, 75%);
-$gray-03: lighten($black, 60%);
-$gray-04: lighten($black, 45%);
-$gray-05: lighten($black, 30%);
-$gray-06: lighten($black, 15%);
+$gray-04: lighten($black, 60%);
+$gray-05: lighten($black, 45%);
+$gray-06: lighten($black, 30%);
+$gray-07: lighten($black, 15%);
 
 $primary-color-dark: darken($primary-color, 30%);
 $primary-accent-dark: #f18200;
@@ -27,4 +27,4 @@ $primary-accent-dark: #f18200;
 $display-font: 'Poppins', Arial, sans-serif;
 $body-font: 'Roboto', Arial, sans-serif;
 
-$body-letterspacing: 0.3px; 
+$body-letterspacing: 0.3px;
