@@ -166,9 +166,15 @@ createReviewHTML = (review) => {
   name.innerHTML = review.name;
   li.appendChild(name);
 
-  const rating = document.createElement('p');
-  rating.innerHTML = `Rating: ${review.rating}`;
-  li.appendChild(rating);
+  const starRating = document.createElement('div');
+  starRating.className = 'star-rating';
+  starRating.innerHTML = createStarRating(review.rating);
+
+  const ratingDescription = document.createElement('span');
+  ratingDescription.innerHTML = `Rating: ${review.rating}`
+  ratingDescription.className = 'sr-only';
+  starRating.appendChild(ratingDescription);
+  li.appendChild(starRating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
@@ -176,6 +182,25 @@ createReviewHTML = (review) => {
 
   return li;
 }
+
+/**
+ * Convert the review rating into a star rating
+ */
+let createStarRating = function(rating) {
+  const redStar = `<i aria-hidden class='fa fa-star'></i>`;
+  const grayStar = `<i aria-hidden class='fa fa-star gray'></i>`;
+  let string = "";
+  for (let i = 0; i < 5; i++) {
+
+    if (rating > 0) {
+      string += redStar;
+    } else {
+      string += grayStar;
+    }
+    rating--;
+  }
+  return string;
+ }
 
 /**
  * Add restaurant name to the breadcrumb navigation menu
