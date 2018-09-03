@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1000px) {
   .inside {
     #maincontent{
       grid-template-columns: 1fr;
@@ -7,6 +7,9 @@
     }
   }
 
+  #restaurant-attributes {
+    margin-bottom: 0;
+  }
   #restaurant-container {
     display: flex;
     flex-direction: column;
@@ -21,6 +24,7 @@
     margin-left: -50vw;
     margin-right: -50vw;
     height: 250px;
+    border-radius: 0;
   }
 
   #restaurant-cuisine {
@@ -94,5 +98,14 @@
 
   .filter-options {
     padding: 20px 20px 10px;
+  }
+
+  #restaurant-attributes {
+    justify-content: space-between;
+  }
+
+  #restaurant-cuisine,
+  #restaurant-neighborhood {
+    font-size: 14px;
   }
 }

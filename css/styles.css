@@ -69,6 +69,7 @@ h2, h3 {
 
 h3 {
   margin-bottom: 15px;
+  font-size: 23px;
 }
 
 h3 + p {
@@ -77,6 +78,10 @@ h3 + p {
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
+}
+
+.bold {
+  font-weight: 500;
 }
 
 #maincontent {
@@ -307,6 +312,8 @@ nav #dinewise-mobile {
   margin-bottom: 5px;
   border-top: 1px solid #bfbfbf;
   padding-top: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .inside #map-container h3:first-of-type {
@@ -366,11 +373,22 @@ nav #dinewise-mobile {
   width: 90%;
 }
 
-#restaurant-cuisine {
+#restaurant-cuisine,
+#restaurant-neighborhood {
   color: #4d4d4d;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 15px 0 15px;
+  font-size: 15px;
+  margin: 0;
+}
+
+#restaurant-neighborhood {
+  margin-left: 20px;
+}
+
+#restaurant-attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0 30px;
 }
 
 #restaurant-container {
@@ -380,7 +398,7 @@ nav #dinewise-mobile {
 
 #restaurant-container i {
   margin-right: 5px;
-  color: #999999;
+  color: #e02e48;
 }
 
 #image-container {
@@ -393,7 +411,6 @@ nav #dinewise-mobile {
 
 #reviews-container h3 {
   margin-top: 0;
-  font-size: 23px;
 }
 
 #reviews-list {
@@ -449,11 +466,14 @@ nav #dinewise-mobile {
   color: #dedede;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1000px) {
   .inside #maincontent {
     grid-template-columns: 1fr;
     max-width: 720px;
     padding: 0 40px 40px;
+  }
+  #restaurant-attributes {
+    margin-bottom: 0;
   }
   #restaurant-container {
     display: -webkit-box;
@@ -475,6 +495,7 @@ nav #dinewise-mobile {
     margin-left: -50vw;
     margin-right: -50vw;
     height: 250px;
+    border-radius: 0;
   }
   #restaurant-cuisine {
     margin-bottom: 0;
@@ -537,5 +558,14 @@ nav #dinewise-mobile {
   }
   .filter-options {
     padding: 20px 20px 10px;
+  }
+  #restaurant-attributes {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  #restaurant-cuisine,
+  #restaurant-neighborhood {
+    font-size: 14px;
   }
 }

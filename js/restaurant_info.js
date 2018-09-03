@@ -94,7 +94,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   span.setAttribute('aria-label', `An image of ${restaurant.name}`);
 
   const cuisine = document.getElementById('restaurant-cuisine');
-  cuisine.innerHTML = `<i aria-hidden class="fa fa-cutlery"></i>` + restaurant.cuisine_type;
+  cuisine.innerHTML = `<i aria-hidden class="fa fa-cutlery"></i><span class='bold'>Cuisine: </span>${restaurant.cuisine_type}`;
+
+  const neighborhood = document.getElementById('restaurant-neighborhood');
+  neighborhood.innerHTML = `<i class="fa fa-map-marker" aria-hidden="true"></i><span class='bold'>Neighborhood: </span>${restaurant.neighborhood}`;
 
   // fill operating hours
   if (restaurant.operating_hours) {

@@ -1,8 +1,9 @@
 let restaurants,
   neighborhoods,
-  cuisines
-var newMap
-var markers = []
+  cuisines;
+var newMap;
+var markers = [];
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -173,7 +174,6 @@ createRestaurantHTML = (restaurant) => {
   restaurantInfo.className = 'restaurant-info';
   li.append(restaurantInfo);
 
-  // const name = document.createElement('h2');
   const name = document.createElement('a');
   name.className = 'restaurant-name';
   name.href = restaurantUrl;
@@ -194,9 +194,9 @@ createRestaurantHTML = (restaurant) => {
   more.onclick = () => {
     location.href = restaurantUrl;
   }
-  restaurantInfo.append(more)
+  restaurantInfo.append(more);
 
-  return li
+  return li;
 }
 
 /**
@@ -212,7 +212,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     }
     self.markers.push(marker);
   });
-
 }
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
