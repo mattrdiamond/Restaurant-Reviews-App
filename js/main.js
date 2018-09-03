@@ -155,19 +155,28 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
+  const restaurantUrl = DBHelper.urlForRestaurant(restaurant);
+
   const li = document.createElement('li');
+
+  const imageLink = document.createElement('a');
+  imageLink.href = restaurantUrl;
+  li.append(imageLink);
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = `An image of ${restaurant.name}`;
-  li.append(image);
+  imageLink.append(image);
 
   const restaurantInfo = document.createElement('div');
   restaurantInfo.className = 'restaurant-info';
   li.append(restaurantInfo);
 
-  const name = document.createElement('h2');
+  // const name = document.createElement('h2');
+  const name = document.createElement('a');
+  name.className = 'restaurant-name';
+  name.href = restaurantUrl;
   name.innerHTML = restaurant.name;
   restaurantInfo.append(name);
 
@@ -178,16 +187,13 @@ createRestaurantHTML = (restaurant) => {
   const address = document.createElement('p');
   const addressFormat = restaurant.address.replace(',', '<br/>');
   address.innerHTML = addressFormat;
-  // address.innerHTML = restaurant.address;
   restaurantInfo.append(address);
 
   const more = document.createElement('button');
   more.innerHTML = 'View Details';
   more.onclick = () => {
-    const url = DBHelper.urlForRestaurant(restaurant);
-    location.href = url;
+    location.href = restaurantUrl;
   }
-  more.href = DBHelper.urlForRestaurant(restaurant);
   restaurantInfo.append(more)
 
   return li

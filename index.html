@@ -8,13 +8,16 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
-  <title>Restaurant Reviews</title>
+  <title>Dine Wise</title>
 </head>
 
 <body>
   <header>
     <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+      <h1 id="dinewise-mobile"><a href="/">Dine Wise</a></h1>
+      <h1>
+        <a href="/"><img class="dinewise-logo" src="img/dinewise.svg" alt="Dine Wise logo"></a>
+      </h1>
     </nav>
   </header>
 
@@ -22,7 +25,7 @@
     <section id="map-container" aria-label="Map of restaurant locations" role="application">
       <div id="map"></div>
     </section>
-    <section>
+    <section id="restaurant-results">
       <div class="filter-options">
         <h2>Filter Results</h2>
         <select id="neighborhoods-select" aria-label="Filter by neighborhood" name="neighborhoods" onchange="updateRestaurants()">
@@ -43,7 +46,7 @@
 
 
   <footer id="footer">
-    Copyright &copy 2018 <a href="/">Restaurant Reviews</a>. All Rights Reserved.
+    Copyright &copy 2018 <a href="/">Dine Wise</a>. All Rights Reserved.
   </footer>
 
 </body>

@@ -86,12 +86,6 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 
-  // OLD - create image
-  // const image = document.getElementById('restaurant-img');
-  // image.className = 'restaurant-img';
-  // image.alt = `An image of ${restaurant.name}`;
-  // image.src = DBHelper.imageUrlForRestaurant(restaurant);
-
   const imageContainer = document.getElementById('image-container');
   const imageUrl = DBHelper.imageUrlForRestaurant(restaurant);
   imageContainer.style.backgroundImage = `url('${imageUrl}')`;
@@ -100,7 +94,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   span.setAttribute('aria-label', `An image of ${restaurant.name}`);
 
   const cuisine = document.getElementById('restaurant-cuisine');
-  cuisine.innerHTML = restaurant.cuisine_type;
+  cuisine.innerHTML = `<i aria-hidden class="fa fa-cutlery"></i>` + restaurant.cuisine_type;
 
   // fill operating hours
   if (restaurant.operating_hours) {
@@ -119,11 +113,12 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     const row = document.createElement('tr');
 
     const day = document.createElement('td');
+    day.className = 'day';
     day.innerHTML = key;
     row.appendChild(day);
 
     const time = document.createElement('td');
-    time.innerHTML = operatingHours[key];
+    time.innerHTML = operatingHours[key].replace(',', ',<br/>');
     row.appendChild(time);
 
     hours.appendChild(row);
@@ -186,17 +181,12 @@ createReviewHTML = (review) => {
 /**
  * Convert the review rating into a star rating
  */
-let createStarRating = function(rating) {
+createStarRating = (rating) => {
   const redStar = `<i aria-hidden class='fa fa-star'></i>`;
   const grayStar = `<i aria-hidden class='fa fa-star gray'></i>`;
   let string = "";
   for (let i = 0; i < 5; i++) {
-
-    if (rating > 0) {
-      string += redStar;
-    } else {
-      string += grayStar;
-    }
+    (rating > 0 ? string += redStar : string += grayStar);
     rating--;
   }
   return string;
