@@ -17,8 +17,8 @@ $gray-05: lighten($black, 45%);
 $gray-06: lighten($black, 30%);
 $gray-07: lighten($black, 15%);
 
-$primary-color-dark: darken($primary-color, 30%);
-$primary-accent-dark: #f18200;
+$primary-color-dark: darken($primary-color, 20%);
+$primary-accent-dark: darken($primary-accent, 5%);
 
 //--------------------------------------------------------------------
 // Fonts
