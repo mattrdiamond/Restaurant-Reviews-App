@@ -7,8 +7,8 @@ html {
 	height: 100%;
 }
 
-body,td,th,p{
-	font-size: 11pt;
+body,td,th,p {
+	font-size: 14.5px;
 	color: $gray-07;
 	line-height: 1.5;
 	vertical-align: top;
@@ -25,7 +25,7 @@ button {
 	border: 2px solid $primary-color;
 	border-radius: 5px;
 	color: $primary-color;
-	font-size: 9pt;
+	font-size: 12px;
 	padding: 7px 15px 6px;
 	letter-spacing: 0.4px;
 	text-align: center;
@@ -40,8 +40,7 @@ button {
 }
 
 ul, li {
-	// font-family: $display-font;
-	font-size: 10pt;
+	font-size: 14px;
 	color: $gray-06;
 }
 
@@ -84,13 +83,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   min-height: 100%;
 	box-sizing: border-box;
 	margin: 0 auto;
-	// max-width: 1165px;
 }
 
 #footer {
   background-color: $primary-color;
   color: $white;
-  font-size: 9pt;
+  font-size: 12px;
   letter-spacing: 0.7px;
   padding: 25px;
   text-align: center;
@@ -116,7 +114,6 @@ nav {
 		margin: auto;
 		a {
 			color: $white;
-		  font-size: 14pt;
 		  font-weight: 200;
 		  letter-spacing: 10px;
 		  text-transform: uppercase;
@@ -143,7 +140,6 @@ nav {
 
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-  width: 100%;
   background-color: $primary-accent;
   align-items: center;
 	display: flex;
@@ -160,7 +156,7 @@ nav {
 		background-color: $white;
 	  border: 1px solid $white;
 	  font-family: $body-font;
-	  font-size: 11pt;
+	  font-size: 14px;
 		font-weight: 300;
 	  height: 35px;
 	  letter-spacing: $body-letterspacing;

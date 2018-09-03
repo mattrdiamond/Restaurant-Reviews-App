@@ -66,7 +66,7 @@
 		border-radius: 3px 3px 0 0;
 	}
 	.restaurant-details {
-		padding: 6%;
+		padding: 20px;
 		.day {
 			font-weight: 500;
 			padding-right: 20px;
@@ -85,7 +85,7 @@
 
 #restaurant-name {
   font-family: $display-font;
-  font-size: 22pt;
+  font-size: 28px;
 	margin-bottom: 0;
   letter-spacing: 0;
 	border-bottom: 1px solid $gray-03;
@@ -98,14 +98,9 @@
 
 #restaurant-cuisine {
   color: $gray-06;
-  font-size: 12pt;
+  font-size: 16px;
   font-weight: 500;
-	margin: 15 0 15px;
-  // letter-spacing: 10px;
-  // margin: 0 0 20px;
-  // padding: 2px 0;
-  // text-align: center;
-  // text-transform: uppercase;
+	margin: 15px 0 15px;
 }
 
 #restaurant-container {
@@ -127,7 +122,7 @@
 
 #reviews-container h3 {
 	margin-top: 0;
-	font-size: 17pt;
+	font-size: 23px;
 }
 
 #reviews-list {
@@ -155,7 +150,7 @@
 			}
 			&:nth-of-type(2) {
 				font-weight: 500;
-				font-size: 12pt;
+				font-size: 16px;
 				margin-bottom: 5px;
 			}
 		}
