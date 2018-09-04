@@ -16,4 +16,4 @@ Dine Wise is a website that allows the user to filter restaurant reviews by loca
 4.	Run `npm install` in terminal to install the dependencies.
 5.	Start a local server to run the app:
     -	Run `npm start` in terminal.
-    -	This will start a local dev server on http://http://localhost:3000
+    -	This will start a local dev server on http://localhost:3000
