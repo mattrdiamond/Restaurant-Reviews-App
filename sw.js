@@ -18,9 +18,11 @@ const cacheAssets = [
 	'img/7.jpg',
 	'img/8.jpg',
 	'img/9.jpg',
-	'img/10.jpg'
-	//add fonts?
-]
+	'img/10.jpg',
+  'img/dinewise.svg',
+  'https://fonts.googleapis.com/css?family=Poppins:600',
+  'https://fonts.googleapis.com/css?family=Roboto:300,500'
+];
 
 /**
  * Install service Worker
