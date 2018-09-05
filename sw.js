@@ -21,7 +21,8 @@ const cacheAssets = [
 	'img/10.jpg',
   'img/dinewise.svg',
   'https://fonts.googleapis.com/css?family=Poppins:600',
-  'https://fonts.googleapis.com/css?family=Roboto:300,500'
+  'https://fonts.googleapis.com/css?family=Roboto:300,500',
+  'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'
 ];
 
 /**
@@ -68,8 +69,8 @@ self.addEventListener('activate', e => {
  */
 self.addEventListener('fetch', e => {
   e.respondWith(
-    // 1. Check the cache first
-    caches.match(e.request).then(response => {
+    // 1. Check the cache first. ignoreSearch will ignore the query string in the url
+    caches.match(e.request, {ignoreSearch: true}).then(response => {
       if (response) {
         return response;
       }
@@ -93,3 +94,15 @@ self.addEventListener('fetch', e => {
     })
   );
 });
+
+
+
+// self.addEventListener('fetch', event => {
+//   event.respondWith(
+//     caches.open(cacheName)
+//       .then(cache => cache.match(event.request, {ignoreSearch: true}))
+//       .then(response => {
+//       return response || fetch(event.request);
+//     })
+//   );
+// });
