@@ -5,7 +5,10 @@ html {
   height: 100%;
 }
 
-body, td, th, p {
+body,
+td,
+th,
+p {
   font-size: 14.5px;
   color: #262626;
   line-height: 1.5;
@@ -39,7 +42,8 @@ button:hover {
   color: #fff;
 }
 
-ul, li {
+ul,
+li {
   font-size: 14px;
   color: #4d4d4d;
 }
@@ -53,17 +57,24 @@ a img {
   border: none 0px #fff;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #e02e48;
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", Arial, sans-serif;
   margin: 0 0 20px;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: #196ebb;
 }
 
@@ -76,8 +87,23 @@ h3 + p {
   margin-top: 0;
 }
 
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
+}
+
+select {
+  -webkit-appearance: none;
 }
 
 .bold {
@@ -145,6 +171,7 @@ nav h1 a:hover {
 
 nav .dinewise-logo {
   width: 180px;
+  height: 28px;
 }
 
 nav #dinewise-mobile {
@@ -214,7 +241,7 @@ nav #dinewise-mobile {
 #restaurants-list li {
   background-color: #fff;
   font-family: "Poppins", Arial, sans-serif;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #restaurants-list .restaurant-img {
@@ -223,7 +250,7 @@ nav #dinewise-mobile {
   margin: 0;
   max-width: 100%;
   min-width: 100%;
-  border-radius: 15px 15px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 #restaurants-list .restaurant-info {
@@ -326,8 +353,6 @@ nav #dinewise-mobile {
 }
 
 .inside .map-wrapper {
-  -webkit-box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
-  box-shadow: 0 2px 8px rgba(153, 153, 153, 0.4);
   border-radius: 3px;
 }
 
@@ -338,11 +363,11 @@ nav #dinewise-mobile {
   border: 1px solid #dedede;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-radius: 3px 3px 0 0;
+  border-radius: 2px;
 }
 
 .inside .restaurant-details {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .inside .restaurant-details .day {
@@ -355,7 +380,7 @@ nav #dinewise-mobile {
   max-width: 1080px;
   display: grid;
   grid-template-columns: 64% 1fr;
-  grid-column-gap: 40px;
+  grid-column-gap: 50px;
   grid-row-gap: 25px;
   background: #fff;
 }
@@ -422,7 +447,7 @@ nav #dinewise-mobile {
   display: block;
   list-style-type: none;
   overflow: hidden;
-  padding: 15px 13px;
+  padding: 15px 0;
   position: relative;
   border-top: 1px solid #bfbfbf;
 }
