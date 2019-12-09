@@ -380,7 +380,7 @@ nav #dinewise-mobile {
   padding: 30px 40px 40px;
   max-width: 1080px;
   display: grid;
-  grid-template-columns: 64% 1fr;
+  grid-template-columns: 65% 1fr;
   grid-column-gap: 50px;
   grid-row-gap: 25px;
   background: #fff;
@@ -494,6 +494,12 @@ nav #dinewise-mobile {
 
 @media only screen and (max-width: 1000px) {
   .inside #maincontent {
+    grid-column-gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .inside #maincontent {
     grid-template-columns: 1fr;
     max-width: 720px;
     padding: 0 40px 40px;
@@ -514,10 +520,11 @@ nav #dinewise-mobile {
     -ms-flex-order: 3;
     order: 3;
   }
-  #map-container {
+  .inside #map-container {
     -webkit-box-ordinal-group: 5;
     -ms-flex-order: 4;
     order: 4;
+    padding-top: 25px;
   }
   #restaurant-container {
     display: -webkit-box;
@@ -530,6 +537,9 @@ nav #dinewise-mobile {
   }
   #restaurant-cuisine {
     margin-bottom: 0;
+  }
+  .inside .restaurant-details {
+    padding: 20px 0 0;
   }
 }
 

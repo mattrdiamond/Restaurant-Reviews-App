@@ -1,4 +1,9 @@
 @media only screen and (max-width: 1000px) {
+  .inside #maincontent {
+    grid-column-gap: 40px;
+  }
+}
+@media only screen and (max-width: 900px) {
   .inside {
     #maincontent {
       grid-template-columns: 1fr;
@@ -32,8 +37,9 @@
     order: 3;
   }
 
-  #map-container {
+  .inside #map-container {
     order: 4;
+    padding-top: 25px;
   }
 
   #restaurant-container {
@@ -43,6 +49,10 @@
 
   #restaurant-cuisine {
     margin-bottom: 0;
+  }
+
+  .inside .restaurant-details {
+    padding: 20px 0 0;
   }
 }
 
