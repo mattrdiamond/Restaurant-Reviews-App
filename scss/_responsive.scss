@@ -19,19 +19,7 @@
 
   #image-container {
     order: 2;
-    // width: 100vw;
-    // position: relative;
-    // left: 50%;
-    // right: 50%;
-    // margin-left: -50vw;
-    // margin-right: -50vw;
-    // height: 250px;
-    // border-radius: 0;
   }
-
-  // #restaurant-attributes {
-  //   margin-bottom: 0;
-  // }
 
   #reviews-container {
     order: 3;
@@ -53,15 +41,6 @@
 
   .inside .restaurant-details {
     padding: 20px 0 0;
-  }
-}
-
-@media only screen and (max-width: 720px) {
-  nav {
-    // height: 50px;
-    .dinewise-logo {
-      // width: 160px;
-    }
   }
 }
 
