@@ -104,6 +104,7 @@ section {
 
 select {
   -webkit-appearance: none;
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
 }
 
 .bold {
@@ -149,6 +150,13 @@ nav {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  z-index: 500;
+  position: relative;
+}
+
+nav.with-shadow {
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 nav h1 {
@@ -219,6 +227,7 @@ nav #dinewise-mobile {
   margin: 10px;
   padding: 0 10px;
   width: 200px;
+  border-radius: 4px;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -227,7 +236,7 @@ nav #dinewise-mobile {
   list-style: outside none none;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 251px));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-gap: 20px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -379,7 +388,7 @@ nav #dinewise-mobile {
   padding: 30px 40px 40px;
   max-width: 1080px;
   display: grid;
-  grid-template-columns: 64% 1fr;
+  grid-template-columns: 65% 1fr;
   grid-column-gap: 50px;
   grid-row-gap: 25px;
   background: #fff;

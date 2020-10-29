@@ -15,11 +15,12 @@
   "bugs": {
     "url": "https://github.com/mattrdiamond/Restaurant-Review-App-Stage-1/issues"
   },
-  "homepage": "https://github.com/mattrdiamond/Restaurant-Review-App-Stage-1#readme",
+  "homepage": "https://mattrdiamond.github.io/Restaurant-Reviews-App",
   "devDependencies": {
-    "browser-sync": "2.24.6",
-    "gulp": "3.9.1",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "5.0.0",
-    "gulp-sass": "4.0.1"
-  }
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {}
 }
