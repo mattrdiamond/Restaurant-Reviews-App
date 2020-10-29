@@ -4,11 +4,9 @@
 class DBHelper {
   /**
    * Database URL.
-   * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port = 3000; // Change this to your server port
-    // return `http://localhost:${port}/data/restaurants.json`;
+    const port = 3000;
     return "./data/restaurants.json";
   }
 
@@ -42,7 +40,7 @@ class DBHelper {
       if (error) {
         callback(error, null);
       } else {
-        const restaurant = restaurants.find(r => r.id == id);
+        const restaurant = restaurants.find((r) => r.id == id);
         if (restaurant) {
           // Got the restaurant
           callback(null, restaurant);
@@ -64,7 +62,7 @@ class DBHelper {
         callback(error, null);
       } else {
         // Filter restaurants to have only given cuisine type
-        const results = restaurants.filter(r => r.cuisine_type == cuisine);
+        const results = restaurants.filter((r) => r.cuisine_type == cuisine);
         callback(null, results);
       }
     });
@@ -80,7 +78,9 @@ class DBHelper {
         callback(error, null);
       } else {
         // Filter restaurants to have only given neighborhood
-        const results = restaurants.filter(r => r.neighborhood == neighborhood);
+        const results = restaurants.filter(
+          (r) => r.neighborhood == neighborhood
+        );
         callback(null, results);
       }
     });
@@ -102,11 +102,11 @@ class DBHelper {
         let results = restaurants;
         if (cuisine != "all") {
           // filter by cuisine
-          results = results.filter(r => r.cuisine_type == cuisine);
+          results = results.filter((r) => r.cuisine_type == cuisine);
         }
         if (neighborhood != "all") {
           // filter by neighborhood
-          results = results.filter(r => r.neighborhood == neighborhood);
+          results = results.filter((r) => r.neighborhood == neighborhood);
         }
         callback(null, results);
       }
@@ -179,20 +179,10 @@ class DBHelper {
       {
         title: restaurant.name,
         alt: restaurant.name,
-        url: DBHelper.urlForRestaurant(restaurant)
+        url: DBHelper.urlForRestaurant(restaurant),
       }
     );
     marker.addTo(newMap);
     return marker;
   }
-  /* static mapMarkerForRestaurant(restaurant, map) {
-    const marker = new google.maps.Marker({
-      position: restaurant.latlng,
-      title: restaurant.name,
-      url: DBHelper.urlForRestaurant(restaurant),
-      map: map,
-      animation: google.maps.Animation.DROP}
-    );
-    return marker;
-  } */
 }

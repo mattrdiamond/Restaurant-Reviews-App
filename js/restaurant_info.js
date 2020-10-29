@@ -3,7 +3,7 @@ var restaurant, newMap;
 /**
  * Initialize map as soon as the page is loaded.
  */
-document.addEventListener("DOMContentLoaded", event => {
+document.addEventListener("DOMContentLoaded", (event) => {
   initMap();
   setFooterDate();
 });
@@ -20,19 +20,21 @@ initMap = () => {
       self.newMap = L.map("map", {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoom: 16,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
       });
       L.tileLayer(
-        "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}",
+        "https://api.mapbox.com/styles/v1/{style_id}/tiles/{z}/{x}/{y}@2x?access_token={mapboxToken}",
         {
           mapboxToken:
-            "pk.eyJ1Ijoib2hoZWRnZSIsImEiOiJjamt5amNyd2gwazJtM2xuNWgycm9wYzg3In0.6RqwfD-Dh8c03QT-oaOwBQ",
+            "pk.eyJ1IjoibWF0dGRpYW1vbmRkZXYiLCJhIjoiY2tjcDh2eXM5MGRkODJ4czZ3bjZxeGxkNCJ9.iM7EmSf9geONwwSrmGuRaw",
+          tileSize: 512,
           maxZoom: 18,
+          zoomOffset: -1,
           attribution:
             'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
             '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
             'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-          id: "mapbox.streets"
+          style_id: "mattdiamonddev/ckgtqdos8034c19kx0svd1skt",
         }
       ).addTo(newMap);
       fillBreadcrumb();
@@ -41,26 +43,10 @@ initMap = () => {
   });
 };
 
-/* window.initMap = () => {
-  fetchRestaurantFromURL((error, restaurant) => {
-    if (error) { // Got an error!
-      console.error(error);
-    } else {
-      self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: restaurant.latlng,
-        scrollwheel: false
-      });
-      fillBreadcrumb();
-      DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-    }
-  });
-} */
-
 /**
  * Get current restaurant from page URL.
  */
-fetchRestaurantFromURL = callback => {
+fetchRestaurantFromURL = (callback) => {
   if (self.restaurant) {
     // restaurant already fetched!
     callback(null, self.restaurant);
@@ -154,7 +140,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     return;
   }
   const ul = document.getElementById("reviews-list");
-  reviews.forEach(review => {
+  reviews.forEach((review) => {
     ul.appendChild(createReviewHTML(review));
   });
   container.appendChild(ul);
@@ -163,7 +149,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 /**
  * Create review HTML and add it to the webpage.
  */
-createReviewHTML = review => {
+createReviewHTML = (review) => {
   const li = document.createElement("li");
 
   const date = document.createElement("p");
@@ -194,7 +180,7 @@ createReviewHTML = review => {
 /**
  * Convert the review rating into a star rating
  */
-createStarRating = rating => {
+createStarRating = (rating) => {
   const redStar = `<i aria-hidden class='fa fa-star'></i>`;
   const grayStar = `<i aria-hidden class='fa fa-star gray'></i>`;
   let string = "";
