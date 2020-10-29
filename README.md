@@ -1,6 +1,6 @@
 # Project Overview
 
-Dine Wise is a website that allows the user to filter restaurant reviews by location and/or cuisine. It also integrates the Mapbox API to show the restaurant location on an interactive map. Dine Wise uses a Service Worker to cache all of the site’s assets, so that any page that has visited by a user will be accessible offline.
+Dine Wise is a resturant reviews application that allows the user to filter restaurant reviews by location and/or cuisine. It also integrates the Mapbox API to show the restaurant location on an interactive map. Dine Wise uses a Service Worker to cache all of the site’s assets, so that any page that has visited by a user will be accessible offline.
 
 👉Check out the [live version](https://mattrdiamond.github.io/Restaurant-Reviews-App/), or follow the running instructions below to run locally.
 
