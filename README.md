@@ -4,7 +4,7 @@ Dine Wise is a resturant reviews application that allows the user to filter rest
 
 👉Check out the [live version](https://mattrdiamond.github.io/Restaurant-Reviews-App/), or follow the running instructions below to run locally.
 
-![Screenshot of Dine Wise](img/dinewise_screenshot.jpg)
+![Screenshot of Dine Wise](img/dinewise_screen.jpg)
 
 ## Accessibility Features
 
